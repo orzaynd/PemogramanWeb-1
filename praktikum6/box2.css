@@ -1,0 +1,12 @@
+body{
+    background-color: #351E10;
+    display: flex;
+  }
+  .foto{
+    margin: 20px;
+    border: 2px solid white;
+  }
+  .foto img{
+    width: 200px;
+    height: 300px;
+  }

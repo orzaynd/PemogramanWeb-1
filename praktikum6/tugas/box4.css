@@ -1,0 +1,65 @@
+.satu{
+    width: 310px;
+    height: 100px;
+    background-color: yellow;
+  margin: 20px;
+  border: 1px solid black;
+  }
+  
+  .dua{
+    width: 1200px;
+    height: 100px;
+    background-color: red ;
+  margin: 20px;
+  border: 1px solid black;
+  }
+  
+  .tiga{
+    width: 300px;
+    height: 500px;
+    background-color: lightgreen ;
+  margin: 20px;
+  border: 1px solid black;
+  }
+  
+  .empat{
+    width: 800px;
+    height: 500px;
+    background-color: gray;
+  margin: 20px;
+  border: 1px solid black;
+  }
+  
+  .lima{
+    width: 300px;
+    height: 500px;
+    background-color: lightblue;
+  margin: 20px;
+  border: 1px solid black;
+  }
+  
+  .enam{
+    width: 1500px;
+    height: 100px;
+    background-color: blue;
+  margin: 20px;
+  border: 1px solid black;
+  }
+  
+  .atas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tengah{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bawah{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
