@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+</head>
+<fieldset>
+<body>
+<fieldset>
+      <nav style="text-align: center;">
+            <a href="#" style="margin-right: 15px;">Home</a> | 
+            <a href="#" style="margin-left: 15px; margin-right: 15px;">Generate Link</a> | 
+            <a href="#" style="margin-left: 15px; margin-right: 15px;">Transaction History</a> | 
+            <a href="#" style="margin-left: 15px; margin-right: 15px;">Policy</a> | 
+            <a href="#" style="margin-left: 15px;">Logout</a>
+        </nav>
+    </fieldset>
+     <form action="pesanan_tugaspraktikum3.html">
+        <table>
+          <thead></thead>
+              <tbody>
+            <tr>
+              <td><label for="nama">Title Here:</label></td>
+              <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+           <tr>
+              <td><label for="note">Notes Pemesanan:</label></td>
+              <td><textarea name="note" rows="3" id="note" required placeholder="Year:
+model:
+condition:"></textarea></td>
+            </tr>
+            <tr>
+              <td><label for="notelp">Account Number:</label></td>
+              <td><input type="number" id="notelp" name="notelp" required></td>
+            </tr>
+            <tr>
+              <td><label for="bank">Bank :</label>
+              <td><select><option>HSBC</option>
+              <option>BSI</option><option>BCA<option>BNI</option></option>
+              </td></select
+            </td>
+              <tr>
+              <td><label for="note">Account Holder: </label></td>
+              <td><input type="text" id="nama" name="nama" required placeholder="Name Here"></td>
+            </tr>
+          </tbody>
+        </table>
+            <div style="margin-bottom: 15px;">
+                <label for="upload">Upload Picture:</label><br>
+                <input type="file" id="upload" name="upload">
+            </div>
+        <label for="number">Transaction:</label><input type="number"name="guests"min="1"max="6"><br>
+                <small>* If the transaction is for 3 persons, choose 3 from the drop-down list</small><br>
+                <input type="checkbox" id="sendToPhone" name="sendToPhone">
+                <label for="sendToPhone">Send to Mobile Phone</label><br>
+                <input type="checkbox" id="sendToEmail" name="sendToEmail">
+                <label for="sendToEmail">Send to Email</label><br>
+            <tr>
+              <td><label for="notelp">Account Number:</label></td>
+              <td><input type="number" id="notelp" name="notelp" required></td><br>
+            </tr>
+          <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+              <div style="text-align: center;"><button type="submit" style ="background-color:green;color: white; padding: 10px 20px; border:none;">Pay Using QuidLink</button>
+            </div>
+        </form>
+    </div>
+</body>
+</fieldset>
+</html>
