@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-width, intial-scale=1.0">
+    <title>From Pemesanan Pizza</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>From Pesan Pizza</legend>
+      
+      <h1>Selamat Datang Di Oryza Pizza</h1>
+      <p>Silahkan Isi Pesanan anda disini!</p>
+      
+      <form action="pesanan_pizza.html">
+        <table>
+          <thead>
+            <tr>
+              <td>Informasi Anda</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="nama">Nama:</label></td>
+              <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+            <tr>
+              <td><label for="alamat">Alamat:</label></td>
+              <td><input type="text" id="alamat" name="alamat" required></td>
+            </tr>
+                        <tr>
+              <td><label for="notelp">No Telepon:</label></td>
+              <td><input type="number" id="notelp" name="notelp" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="note">Notes Pemesanan:</label></td>
+              <td><textarea name="note" id="note" required placeholder="Tidak lebih dari 400 Karakter"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h4>Pilih Salah Satu</h4>
+        <label for="crust">Crust</label><br>
+        
+        <input type="radio" id="crust" name="crust" value="cs">
+        <label for="cs">Classic White</label><br>
+        <input type="radio" id="crust" name="crust" value="mg>"
+        <label for="mg">Multigrain</label><br>
+        <input type="radio" id="crust" name="crust" value="cf">
+        <label for="cf">Cheese Stuffed</label><br>
+        <input type="radio" id="crust" name="crust" value="gf">
+        <label for="gf">Gluten Free</label><br>
+        
+        <input type="checkbox" id="" name="toping" value="rs">red sauce <br>
+        <input type="checkbox" id="" name="toping" value="mz">moza <br>
+        <input type="checkbox" id="" name="toping" value="kj">keju <br>
+        <input type="checkbox" id="" name="toping" value="kcp">kecap <br>
+        
+        <h4>Number</h4>
+        <label for="">Pesan Pizza :</label>
+        <input type="number" min="1" max="10">
+        <br>
+        
+        <button type="submit" value="pesan">Pesan Sekarang</button>
+        <button type="reset" value="reset">Reset</button>
+      </from>
+    </fieldset>
+  </body>
+</html>
