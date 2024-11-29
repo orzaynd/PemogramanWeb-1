@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>Form Pemesanan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .order-form {
+            background: #9A7E6F;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            color: #fff;
+        }
+        .order-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+        }
+        .order-form .form-group {
+            margin-bottom: 15px;
+        }
+        .order-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        .order-form .form-group input,
+        .order-form .form-group select,
+        .order-form .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            color: #333;
+        }
+        .order-form .form-group textarea {
+            resize: vertical;
+        }
+        .order-form .form-group .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .order-form .form-group .quantity input {
+            width: 60px;
+            margin-right: 10px;
+        }
+        .order-form .form-group .quantity span {
+            font-size: 16px;
+            color: #fff;
+        }
+        .order-form .form-group .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+        }
+        .order-form button {
+            width: 100%;
+            padding: 10px;
+            background: #493628;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .order-form button:hover {
+            background: #D6C0B3;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-form">
+        <h2>Form Pemesanan</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="item">Jenis Barang:</label>
+                <select id="item" name="item" required>
+                    <option value="Barang 1" data-price="35000">Croissant - Rp 35.000</option>
+                    <option value="Barang 2" data-price="50000">Macarons - Rp 50.000</option>
+                    <option value="Barang 3" data-price="35000">Sourdough - Rp 35.000</option>
+                    <option value="Barang 4" data-price="25000">Pudding - Rp 25.000</option>
+                    <option value="Barang 5" data-price="30000">Cromboloni - Rp 30.000</option>
+                    <option value="Barang 6" data-price="30000">Pretzel - Rp 30.000</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Deskripsi:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat Rumah:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group quantity">
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                <span id="pricePerItem">x Rp 100,000</span>
+            </div>
+            <div class="form-group total">
+                Total: Rp <span id="total">100,000</span>
+            </div>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    <script>
+        const itemSelect = document.getElementById('item');
+        const quantityInput = document.getElementById('quantity');
+        const pricePerItemSpan = document.getElementById('pricePerItem');
+        const totalSpan = document.getElementById('total');
+        function updateTotal() {
+            const selectedItem = itemSelect.options[itemSelect.selectedIndex];
+            const pricePerItem = parseInt(selectedItem.getAttribute('data-price'));
+            const quantity = parseInt(quantityInput.value);
+            const total = pricePerItem * quantity;
+            pricePerItemSpan.textContent = `x Rp ${pricePerItem.toLocaleString('id-ID')}`;
+            totalSpan.textContent = total.toLocaleString('id-ID');
+        }
+        itemSelect.addEventListener('change', updateTotal);
+        quantityInput.addEventListener('input', updateTotal);
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form telah dikirim!');
+        });
+        // Initialize total on page load
+        updateTotal();
+    </script>
+</body>
+</html>
