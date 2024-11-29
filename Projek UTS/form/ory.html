@@ -119,31 +119,25 @@
             <button type="submit">Kirim</button>
         </form>
     </div>
-
     <script>
         const itemSelect = document.getElementById('item');
         const quantityInput = document.getElementById('quantity');
         const pricePerItemSpan = document.getElementById('pricePerItem');
         const totalSpan = document.getElementById('total');
-
         function updateTotal() {
             const selectedItem = itemSelect.options[itemSelect.selectedIndex];
             const pricePerItem = parseInt(selectedItem.getAttribute('data-price'));
             const quantity = parseInt(quantityInput.value);
             const total = pricePerItem * quantity;
-
             pricePerItemSpan.textContent = `x Rp ${pricePerItem.toLocaleString('id-ID')}`;
             totalSpan.textContent = total.toLocaleString('id-ID');
         }
-
         itemSelect.addEventListener('change', updateTotal);
         quantityInput.addEventListener('input', updateTotal);
-
         document.getElementById('orderForm').addEventListener('submit', function(event) {
             event.preventDefault();
             alert('Form telah dikirim!');
         });
-
         // Initialize total on page load
         updateTotal();
     </script>
