@@ -1,0 +1,59 @@
+.hihi{
+    width: 500px;
+    height: 80px;
+    background-color: lightgreen;
+    margin-top:20px;
+  border: 1px solid black;
+  }
+  
+  .haha{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+  
+  .hehe{
+    width:380px;
+    height: 100px;
+    background-color: red;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid black;
+  }
+  
+  .huhu{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+  
+  .hoho{
+    width: 380px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid black;
+  }
+  
+  .atas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tengah{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bawah{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
